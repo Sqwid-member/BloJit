@@ -1,0 +1,55 @@
+<resources>
+    <string name="app_name">Block Constructor</string>
+
+    <!-- Main menu -->
+    <string name="menu_continue">Продовжити останній</string>
+    <string name="menu_new">Створити новий</string>
+    <string name="menu_projects">Мої проєкти</string>
+    <string name="menu_settings">Налаштування</string>
+
+    <!-- New project -->
+    <string name="np_title">Новий проєкт</string>
+    <string name="np_app_name">Назва програми</string>
+    <string name="np_package">Ім\'я пакету</string>
+    <string name="np_min_sdk">Мінімальна версія Android</string>
+    <string name="np_target_sdk">Цільова версія Android</string>
+    <string name="np_orientation">Орієнтація</string>
+    <string name="np_orientation_portrait">Вертикальна</string>
+    <string name="np_orientation_landscape">Ландшафтна</string>
+    <string name="np_orientation_sensor">Авто (датчик)</string>
+    <string name="np_create">Створити</string>
+
+    <!-- Project workspace -->
+    <string name="pw_assets">Ресурси</string>
+    <string name="pw_scripts">Скрипти</string>
+    <string name="pw_settings">Налаштування проєкту</string>
+    <string name="pw_add_image">Додати фото</string>
+    <string name="pw_add_video">Додати відео</string>
+    <string name="pw_add_file">Додати файл</string>
+    <string name="pw_new_script">Новий скрипт</string>
+    <string name="pw_new_folder">Нова папка</string>
+    <string name="pw_run">Запустити</string>
+
+    <!-- Editor -->
+    <string name="ed_add_block">Додати блок</string>
+    <string name="ed_run">Запустити скрипт</string>
+    <string name="ed_block_settings">Налаштування блоку</string>
+    <string name="ed_delete_block">Видалити блок</string>
+    <string name="ed_view_lua">Переглянути Lua</string>
+
+    <!-- Settings -->
+    <string name="set_theme">Тема</string>
+    <string name="set_theme_dark">Темна</string>
+    <string name="set_theme_light">Світла</string>
+    <string name="set_theme_system">Системна</string>
+    <string name="set_lua_engine">Lua-рушій</string>
+    <string name="set_about">Про програму</string>
+
+    <!-- Common -->
+    <string name="common_back">Назад</string>
+    <string name="common_save">Зберегти</string>
+    <string name="common_cancel">Скасувати</string>
+    <string name="common_delete">Видалити</string>
+    <string name="common_rename">Перейменувати</string>
+    <string name="common_ok">Гаразд</string>
+</resources>
