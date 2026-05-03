@@ -1,55 +1,83 @@
 <resources>
-    <string name="app_name">Block Constructor</string>
+    <string name="app_name">BloJit</string>
+    <string name="app_tagline">Visual Android app constructor with Lua scripting</string>
 
     <!-- Main menu -->
-    <string name="menu_continue">Продовжити останній</string>
-    <string name="menu_new">Створити новий</string>
-    <string name="menu_projects">Мої проєкти</string>
-    <string name="menu_settings">Налаштування</string>
+    <string name="menu_continue">Continue last</string>
+    <string name="menu_new">Create new</string>
+    <string name="menu_projects">My projects</string>
+    <string name="menu_settings">Settings</string>
 
     <!-- New project -->
-    <string name="np_title">Новий проєкт</string>
-    <string name="np_app_name">Назва програми</string>
-    <string name="np_package">Ім\'я пакету</string>
-    <string name="np_min_sdk">Мінімальна версія Android</string>
-    <string name="np_target_sdk">Цільова версія Android</string>
-    <string name="np_orientation">Орієнтація</string>
-    <string name="np_orientation_portrait">Вертикальна</string>
-    <string name="np_orientation_landscape">Ландшафтна</string>
-    <string name="np_orientation_sensor">Авто (датчик)</string>
-    <string name="np_create">Створити</string>
+    <string name="np_title">New project</string>
+    <string name="np_app_name">App name</string>
+    <string name="np_package">Package name</string>
+    <string name="np_min_sdk">min SDK</string>
+    <string name="np_target_sdk">target SDK</string>
+    <string name="np_orientation">Orientation</string>
+    <string name="np_orientation_portrait">Portrait</string>
+    <string name="np_orientation_landscape">Landscape</string>
+    <string name="np_orientation_sensor">Auto (sensor)</string>
+    <string name="np_author_section">Author (for blocks)</string>
+    <string name="np_author_name">User name</string>
+    <string name="np_author_passcode">Passcode (digits)</string>
+    <string name="np_create">Create</string>
 
     <!-- Project workspace -->
-    <string name="pw_assets">Ресурси</string>
-    <string name="pw_scripts">Скрипти</string>
-    <string name="pw_settings">Налаштування проєкту</string>
-    <string name="pw_add_image">Додати фото</string>
-    <string name="pw_add_video">Додати відео</string>
-    <string name="pw_add_file">Додати файл</string>
-    <string name="pw_new_script">Новий скрипт</string>
-    <string name="pw_new_folder">Нова папка</string>
-    <string name="pw_run">Запустити</string>
+    <string name="pw_assets">Assets</string>
+    <string name="pw_scripts">Scripts</string>
+    <string name="pw_settings">Project settings</string>
+    <string name="pw_add_image">Image</string>
+    <string name="pw_add_video">Video</string>
+    <string name="pw_add_file">File</string>
+    <string name="pw_add_resource">Add resource</string>
+    <string name="pw_add_script">Add script</string>
+    <string name="pw_new_script">New script or folder</string>
+    <string name="pw_create_script">Create script</string>
+    <string name="pw_create_folder">Create folder</string>
+    <string name="pw_node_name">Name</string>
+    <string name="pw_no_projects">No projects yet</string>
+    <string name="pw_no_projects_hint">Tap «Create new» from the main menu.</string>
+    <string name="pw_project_not_found">Project not found</string>
 
     <!-- Editor -->
-    <string name="ed_add_block">Додати блок</string>
-    <string name="ed_run">Запустити скрипт</string>
-    <string name="ed_block_settings">Налаштування блоку</string>
-    <string name="ed_delete_block">Видалити блок</string>
-    <string name="ed_view_lua">Переглянути Lua</string>
+    <string name="ed_add_block">Add block</string>
+    <string name="ed_run">Run</string>
+    <string name="ed_lua">Lua</string>
+    <string name="ed_block_settings">Block settings</string>
+    <string name="ed_delete_block">Delete</string>
+    <string name="ed_view_lua">Generated Lua</string>
+    <string name="ed_unique_name">Unique name</string>
+    <string name="ed_block_name">Block name</string>
+    <string name="ed_categories">Categories</string>
+    <string name="ed_block_catalog">Block catalog</string>
+    <string name="ed_blocks_count">%1$d blocks</string>
+    <string name="ed_add_into">Add into «%1$s»</string>
+
+    <!-- Run screen -->
+    <string name="rn_run_title">Run: %1$s</string>
+    <string name="rn_log">Log</string>
+    <string name="rn_error">Error: %1$s</string>
 
     <!-- Settings -->
-    <string name="set_theme">Тема</string>
-    <string name="set_theme_dark">Темна</string>
-    <string name="set_theme_light">Світла</string>
-    <string name="set_theme_system">Системна</string>
-    <string name="set_lua_engine">Lua-рушій</string>
-    <string name="set_about">Про програму</string>
+    <string name="set_theme">Theme</string>
+    <string name="set_theme_dark">Dark</string>
+    <string name="set_theme_light">Light</string>
+    <string name="set_theme_system">System</string>
+    <string name="set_lua_engine">Lua engine</string>
+    <string name="set_lua_engine_note">Lua engine: LuaJ (pure Java). Switch to LuaJIT via JNI is planned.</string>
+    <string name="set_about">About BloJit</string>
+    <string name="set_version">BloJit v0.1 — Sqwid</string>
 
     <!-- Common -->
-    <string name="common_back">Назад</string>
-    <string name="common_save">Зберегти</string>
-    <string name="common_cancel">Скасувати</string>
-    <string name="common_delete">Видалити</string>
-    <string name="common_rename">Перейменувати</string>
-    <string name="common_ok">Гаразд</string>
+    <string name="common_back">Back</string>
+    <string name="common_save">Save</string>
+    <string name="common_cancel">Cancel</string>
+    <string name="common_delete">Delete</string>
+    <string name="common_rename">Rename</string>
+    <string name="common_ok">OK</string>
+    <string name="common_done">Done</string>
+    <string name="common_add_inside">Add inside</string>
+    <string name="common_categories">‹ Categories</string>
+    <string name="common_empty">(empty)</string>
 </resources>

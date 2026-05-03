@@ -1,4 +1,4 @@
-package com.sqwid.blockconstructor.ui
+package com.sqwid.blojit.ui
 
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.Surface
@@ -13,16 +13,16 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.sqwid.blockconstructor.data.ProjectStore
-import com.sqwid.blockconstructor.ui.screens.EditorScreen
-import com.sqwid.blockconstructor.ui.screens.MainMenuScreen
-import com.sqwid.blockconstructor.ui.screens.NewProjectScreen
-import com.sqwid.blockconstructor.ui.screens.ProjectScreen
-import com.sqwid.blockconstructor.ui.screens.ProjectsScreen
-import com.sqwid.blockconstructor.ui.screens.RunScreen
-import com.sqwid.blockconstructor.ui.screens.SettingsScreen
-import com.sqwid.blockconstructor.ui.theme.BlockConstructorTheme
-import com.sqwid.blockconstructor.ui.theme.ThemePreference
+import com.sqwid.blojit.data.ProjectStore
+import com.sqwid.blojit.ui.screens.EditorScreen
+import com.sqwid.blojit.ui.screens.MainMenuScreen
+import com.sqwid.blojit.ui.screens.NewProjectScreen
+import com.sqwid.blojit.ui.screens.ProjectScreen
+import com.sqwid.blojit.ui.screens.ProjectsScreen
+import com.sqwid.blojit.ui.screens.RunScreen
+import com.sqwid.blojit.ui.screens.SettingsScreen
+import com.sqwid.blojit.ui.theme.BloJitTheme
+import com.sqwid.blojit.ui.theme.ThemePreference
 
 object Routes {
     const val Menu = "menu"
@@ -39,8 +39,8 @@ object Routes {
 
 @Composable
 fun AppRoot() {
-    var theme by rememberSaveable { mutableStateOf(ThemePreference.System) }
-    BlockConstructorTheme(preference = theme) {
+    var theme by rememberSaveable { mutableStateOf(ThemePreference.Dark) }
+    BloJitTheme(preference = theme) {
         Surface(modifier = Modifier.fillMaxSize()) {
             val nav = rememberNavController()
             val context = LocalContext.current

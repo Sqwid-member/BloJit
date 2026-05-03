@@ -1,4 +1,4 @@
-package com.sqwid.blockconstructor.ui.screens
+package com.sqwid.blojit.ui.screens
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -27,11 +27,13 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import com.sqwid.blockconstructor.data.Project
-import com.sqwid.blockconstructor.data.ProjectStore
-import com.sqwid.blockconstructor.ui.Routes
+import com.sqwid.blojit.R
+import com.sqwid.blojit.data.Project
+import com.sqwid.blojit.data.ProjectStore
+import com.sqwid.blojit.ui.Routes
 import java.text.SimpleDateFormat
 import java.util.Date
 
@@ -42,9 +44,11 @@ fun ProjectsScreen(nav: NavController, store: ProjectStore) {
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("Мої проєкти") },
+                title = { Text(stringResource(R.string.menu_projects)) },
                 navigationIcon = {
-                    TextButton(onClick = { nav.popBackStack() }) { Text("Назад") }
+                    TextButton(onClick = { nav.popBackStack() }) {
+                        Text(stringResource(R.string.common_back))
+                    }
                 }
             )
         }
@@ -55,9 +59,9 @@ fun ProjectsScreen(nav: NavController, store: ProjectStore) {
                 verticalArrangement = Arrangement.Center,
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
-                Text("Поки що немає проєктів", style = MaterialTheme.typography.titleLarge)
+                Text(stringResource(R.string.pw_no_projects), style = MaterialTheme.typography.titleLarge)
                 Text(
-                    "Натисни «Створити новий» у головному меню.",
+                    stringResource(R.string.pw_no_projects_hint),
                     color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
             }
@@ -95,12 +99,12 @@ private fun ProjectCard(project: Project, onOpen: () -> Unit, onDelete: () -> Un
                 Text(project.packageName, style = MaterialTheme.typography.bodyMedium,
                     color = MaterialTheme.colorScheme.onSurfaceVariant)
                 val date = SimpleDateFormat("yyyy-MM-dd HH:mm").format(Date(project.updatedAt))
-                Text("оновлено $date · ${project.orientation}",
+                Text("$date · ${project.orientation}",
                     style = MaterialTheme.typography.bodyMedium,
                     color = MaterialTheme.colorScheme.onSurfaceVariant)
             }
             IconButton(onClick = onDelete) {
-                Icon(Icons.Filled.Delete, contentDescription = "Видалити")
+                Icon(Icons.Filled.Delete, contentDescription = null)
             }
         }
     }

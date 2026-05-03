@@ -1,4 +1,4 @@
-package com.sqwid.blockconstructor.ui.screens
+package com.sqwid.blojit.ui.screens
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -34,12 +34,12 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
-import com.sqwid.blockconstructor.blocks.LuaCodegen
-import com.sqwid.blockconstructor.data.ProjectStore
-import com.sqwid.blockconstructor.data.ScriptNode
-import com.sqwid.blockconstructor.data.TreeNode
-import com.sqwid.blockconstructor.runtime.RuntimeCanvas
-import com.sqwid.blockconstructor.scripting.LuaEngine
+import com.sqwid.blojit.blocks.LuaCodegen
+import com.sqwid.blojit.data.ProjectStore
+import com.sqwid.blojit.data.ScriptNode
+import com.sqwid.blojit.data.TreeNode
+import com.sqwid.blojit.runtime.RuntimeCanvas
+import com.sqwid.blojit.scripting.LuaEngine
 import kotlinx.coroutines.delay
 
 @OptIn(ExperimentalMaterial3Api::class)

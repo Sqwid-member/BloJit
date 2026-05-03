@@ -1,6 +1,6 @@
-package com.sqwid.blockconstructor.blocks
+package com.sqwid.blojit.blocks
 
-import com.sqwid.blockconstructor.data.BlockInstance
+import com.sqwid.blojit.data.BlockInstance
 
 /**
  * Static description of a block type. Instances are created via [BlockInstance] and refer back

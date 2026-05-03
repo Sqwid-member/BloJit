@@ -1,4 +1,4 @@
-package com.sqwid.blockconstructor.ui.screens
+package com.sqwid.blojit.ui.screens
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -51,16 +51,16 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
-import com.sqwid.blockconstructor.blocks.BlockCatalog
-import com.sqwid.blockconstructor.blocks.BlockCategory
-import com.sqwid.blockconstructor.blocks.BlockSpec
-import com.sqwid.blockconstructor.blocks.LuaCodegen
-import com.sqwid.blockconstructor.data.BlockInstance
-import com.sqwid.blockconstructor.data.ProjectStore
-import com.sqwid.blockconstructor.data.ScriptNode
-import com.sqwid.blockconstructor.data.TreeNode
-import com.sqwid.blockconstructor.ui.Routes
-import com.sqwid.blockconstructor.ui.components.BlockKeyboard
+import com.sqwid.blojit.blocks.BlockCatalog
+import com.sqwid.blojit.blocks.BlockCategory
+import com.sqwid.blojit.blocks.BlockSpec
+import com.sqwid.blojit.blocks.LuaCodegen
+import com.sqwid.blojit.data.BlockInstance
+import com.sqwid.blojit.data.ProjectStore
+import com.sqwid.blojit.data.ScriptNode
+import com.sqwid.blojit.data.TreeNode
+import com.sqwid.blojit.ui.Routes
+import com.sqwid.blojit.ui.components.BlockKeyboard
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

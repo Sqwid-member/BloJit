@@ -1,4 +1,4 @@
-package com.sqwid.blockconstructor.ui.screens
+package com.sqwid.blojit.ui.screens
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -29,17 +29,19 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import com.sqwid.blockconstructor.data.Orientation
-import com.sqwid.blockconstructor.data.Project
-import com.sqwid.blockconstructor.data.ProjectStore
-import com.sqwid.blockconstructor.ui.Routes
+import com.sqwid.blojit.R
+import com.sqwid.blojit.data.Orientation
+import com.sqwid.blojit.data.Project
+import com.sqwid.blojit.data.ProjectStore
+import com.sqwid.blojit.ui.Routes
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun NewProjectScreen(nav: NavController, store: ProjectStore) {
-    var appName by remember { mutableStateOf("Мій додаток") }
+    var appName by remember { mutableStateOf("My App") }
     var pkg by remember { mutableStateOf("com.sqwid.user.myapp") }
     var minSdk by remember { mutableStateOf("24") }
     var targetSdk by remember { mutableStateOf("34") }
@@ -50,9 +52,11 @@ fun NewProjectScreen(nav: NavController, store: ProjectStore) {
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("Новий проєкт") },
+                title = { Text(stringResource(R.string.np_title)) },
                 navigationIcon = {
-                    TextButton(onClick = { nav.popBackStack() }) { Text("Назад") }
+                    TextButton(onClick = { nav.popBackStack() }) {
+                        Text(stringResource(R.string.common_back))
+                    }
                 }
             )
         }
@@ -67,45 +71,48 @@ fun NewProjectScreen(nav: NavController, store: ProjectStore) {
         ) {
             OutlinedTextField(
                 value = appName, onValueChange = { appName = it },
-                label = { Text("Назва програми") }, modifier = Modifier.fillMaxWidth()
+                label = { Text(stringResource(R.string.np_app_name)) },
+                modifier = Modifier.fillMaxWidth()
             )
             OutlinedTextField(
                 value = pkg, onValueChange = { pkg = it },
-                label = { Text("Ім'я пакету (com.example.myapp)") },
+                label = { Text(stringResource(R.string.np_package)) },
                 modifier = Modifier.fillMaxWidth()
             )
             Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                 OutlinedTextField(
                     value = minSdk, onValueChange = { minSdk = it.filter { c -> c.isDigit() } },
-                    label = { Text("min SDK") }, modifier = Modifier.weight(1f)
+                    label = { Text(stringResource(R.string.np_min_sdk)) },
+                    modifier = Modifier.weight(1f)
                 )
                 OutlinedTextField(
                     value = targetSdk, onValueChange = { targetSdk = it.filter { c -> c.isDigit() } },
-                    label = { Text("target SDK") }, modifier = Modifier.weight(1f)
+                    label = { Text(stringResource(R.string.np_target_sdk)) },
+                    modifier = Modifier.weight(1f)
                 )
             }
-            Text("Орієнтація", style = MaterialTheme.typography.titleLarge)
+            Text(stringResource(R.string.np_orientation), style = MaterialTheme.typography.titleLarge)
             Orientation.values().forEach { opt ->
                 Row(verticalAlignment = Alignment.CenterVertically) {
                     RadioButton(selected = orientation == opt, onClick = { orientation = opt })
-                    Text(
-                        when (opt) {
-                            Orientation.Portrait -> "Вертикальна"
-                            Orientation.Landscape -> "Ландшафтна"
-                            Orientation.Sensor -> "Авто (датчик)"
-                        }
-                    )
+                    Text(stringResource(when (opt) {
+                        Orientation.Portrait -> R.string.np_orientation_portrait
+                        Orientation.Landscape -> R.string.np_orientation_landscape
+                        Orientation.Sensor -> R.string.np_orientation_sensor
+                    }))
                 }
             }
 
-            Text("Автор (для блоків)", style = MaterialTheme.typography.titleLarge)
+            Text(stringResource(R.string.np_author_section), style = MaterialTheme.typography.titleLarge)
             OutlinedTextField(
                 value = authorName, onValueChange = { authorName = it },
-                label = { Text("Ім'я користувача") }, modifier = Modifier.fillMaxWidth()
+                label = { Text(stringResource(R.string.np_author_name)) },
+                modifier = Modifier.fillMaxWidth()
             )
             OutlinedTextField(
                 value = authorPasscode, onValueChange = { authorPasscode = it.filter { c -> c.isDigit() } },
-                label = { Text("Пасс-код (цифри)") }, modifier = Modifier.fillMaxWidth()
+                label = { Text(stringResource(R.string.np_author_passcode)) },
+                modifier = Modifier.fillMaxWidth()
             )
 
             Spacer(Modifier.height(8.dp))
@@ -127,7 +134,7 @@ fun NewProjectScreen(nav: NavController, store: ProjectStore) {
                     }
                 },
                 modifier = Modifier.fillMaxWidth().height(52.dp)
-            ) { Text("Створити") }
+            ) { Text(stringResource(R.string.np_create)) }
         }
     }
 }

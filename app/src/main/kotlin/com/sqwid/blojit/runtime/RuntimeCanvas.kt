@@ -1,4 +1,4 @@
-package com.sqwid.blockconstructor.runtime
+package com.sqwid.blojit.runtime
 
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.background
@@ -23,8 +23,8 @@ import androidx.compose.ui.graphics.drawscope.translate
 import androidx.compose.ui.graphics.drawscope.withTransform
 import androidx.compose.ui.graphics.nativeCanvas
 import androidx.compose.ui.input.pointer.pointerInput
-import com.sqwid.blockconstructor.scripting.DrawCommand
-import com.sqwid.blockconstructor.scripting.LuaEngine
+import com.sqwid.blojit.scripting.DrawCommand
+import com.sqwid.blojit.scripting.LuaEngine
 import kotlinx.coroutines.delay
 
 /**

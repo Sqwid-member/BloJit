@@ -1,4 +1,4 @@
-package com.sqwid.blockconstructor.data
+package com.sqwid.blojit.data
 
 import kotlinx.serialization.Serializable
 

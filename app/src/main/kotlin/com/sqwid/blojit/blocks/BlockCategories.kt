@@ -1,4 +1,4 @@
-package com.sqwid.blockconstructor.blocks
+package com.sqwid.blojit.blocks
 
 import androidx.compose.ui.graphics.Color
 

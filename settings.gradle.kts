@@ -20,5 +20,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "BlockConstructor"
+rootProject.name = "BloJit"
 include(":app")

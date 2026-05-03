@@ -1,4 +1,4 @@
-package com.sqwid.blockconstructor.data
+package com.sqwid.blojit.data
 
 import android.content.Context
 import kotlinx.serialization.encodeToString

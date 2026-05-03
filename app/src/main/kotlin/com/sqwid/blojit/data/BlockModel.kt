@@ -1,9 +1,9 @@
-package com.sqwid.blockconstructor.data
+package com.sqwid.blojit.data
 
 import kotlinx.serialization.Serializable
 
 /**
- * A concrete instance of a [com.sqwid.blockconstructor.blocks.BlockSpec] placed in the script tree.
+ * A concrete instance of a [com.sqwid.blojit.blocks.BlockSpec] placed in the script tree.
  *
  * Blocks form a hierarchy: each block has a list of named "slots", and each slot can hold
  * an ordered list of child blocks (think of them as folders / scopes — the root is a "program"

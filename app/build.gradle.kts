@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "com.sqwid.blockconstructor"
+    namespace = "com.sqwid.blojit"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.sqwid.blockconstructor"
+        applicationId = "com.sqwid.blojit"
         minSdk = 24
         targetSdk = 34
         versionCode = 1

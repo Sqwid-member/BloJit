@@ -1,4 +1,4 @@
-package com.sqwid.blockconstructor.ui.components
+package com.sqwid.blojit.ui.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable

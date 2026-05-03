@@ -1,4 +1,4 @@
-package com.sqwid.blockconstructor.ui.screens
+package com.sqwid.blojit.ui.screens
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -16,7 +16,9 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import com.sqwid.blockconstructor.ui.theme.ThemePreference
+import androidx.compose.ui.res.stringResource
+import com.sqwid.blojit.R
+import com.sqwid.blojit.ui.theme.ThemePreference
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -28,9 +30,11 @@ fun SettingsScreen(
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("Налаштування") },
+                title = { Text(stringResource(R.string.menu_settings)) },
                 navigationIcon = {
-                    TextButton(onClick = { nav.popBackStack() }) { Text("Назад") }
+                    TextButton(onClick = { nav.popBackStack() }) {
+                        Text(stringResource(R.string.common_back))
+                    }
                 }
             )
         }
@@ -38,25 +42,25 @@ fun SettingsScreen(
         Column(
             modifier = Modifier.fillMaxSize().padding(padding).padding(20.dp)
         ) {
-            Text("Тема", style = MaterialTheme.typography.titleLarge)
+            Text(stringResource(R.string.set_theme), style = MaterialTheme.typography.titleLarge)
             ThemePreference.values().forEach { opt ->
                 Row(verticalAlignment = Alignment.CenterVertically, modifier = Modifier.padding(vertical = 4.dp)) {
                     RadioButton(selected = current == opt, onClick = { onThemeChange(opt) })
-                    Text(when (opt) {
-                        ThemePreference.System -> "Системна"
-                        ThemePreference.Dark -> "Темна"
-                        ThemePreference.Light -> "Світла"
-                    })
+                    Text(stringResource(when (opt) {
+                        ThemePreference.System -> R.string.set_theme_system
+                        ThemePreference.Dark -> R.string.set_theme_dark
+                        ThemePreference.Light -> R.string.set_theme_light
+                    }))
                 }
             }
             Text(
-                "Lua-рушій: LuaJ (pure Java). Перехід на LuaJIT через JNI заплановано.",
+                stringResource(R.string.set_lua_engine_note),
                 style = MaterialTheme.typography.bodyMedium,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                 modifier = Modifier.padding(top = 24.dp)
             )
             Text(
-                "Block Constructor v0.1 — Sqwid",
+                stringResource(R.string.set_version),
                 style = MaterialTheme.typography.bodyMedium,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                 modifier = Modifier.padding(top = 12.dp)

@@ -1,4 +1,4 @@
-package com.sqwid.blockconstructor.ui.screens
+package com.sqwid.blojit.ui.screens
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -20,10 +20,12 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import com.sqwid.blockconstructor.data.ProjectStore
-import com.sqwid.blockconstructor.ui.Routes
+import com.sqwid.blojit.R
+import com.sqwid.blojit.data.ProjectStore
+import com.sqwid.blojit.ui.Routes
 
 @Composable
 fun MainMenuScreen(nav: NavController, store: ProjectStore) {
@@ -33,36 +35,36 @@ fun MainMenuScreen(nav: NavController, store: ProjectStore) {
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text("Block Constructor", style = MaterialTheme.typography.displayLarge)
+        Text(stringResource(R.string.app_name), style = MaterialTheme.typography.displayLarge)
         Spacer(Modifier.height(8.dp))
         Text(
-            "Візуальний конструктор Android-додатків з LuaJIT",
+            stringResource(R.string.app_tagline),
             style = MaterialTheme.typography.bodyMedium,
             color = MaterialTheme.colorScheme.onSurfaceVariant
         )
         Spacer(Modifier.height(48.dp))
 
         MenuButton(
-            label = "Продовжити останній",
+            label = stringResource(R.string.menu_continue),
             icon = Icons.Filled.PlayArrow,
             enabled = last != null,
             onClick = { last?.let { nav.navigate(Routes.project(it)) } }
         )
         Spacer(Modifier.height(12.dp))
         MenuButton(
-            label = "Створити новий",
+            label = stringResource(R.string.menu_new),
             icon = Icons.Filled.Add,
             onClick = { nav.navigate(Routes.New) }
         )
         Spacer(Modifier.height(12.dp))
         MenuButton(
-            label = "Мої проєкти",
+            label = stringResource(R.string.menu_projects),
             icon = Icons.Filled.FolderOpen,
             onClick = { nav.navigate(Routes.Projects) }
         )
         Spacer(Modifier.height(12.dp))
         MenuButton(
-            label = "Налаштування",
+            label = stringResource(R.string.menu_settings),
             icon = Icons.Filled.Settings,
             onClick = { nav.navigate(Routes.Settings) }
         )
@@ -86,8 +88,7 @@ private fun MenuButton(
         )
     ) {
         Icon(icon, contentDescription = null)
-        Spacer(Modifier.height(0.dp).then(Modifier))
-        androidx.compose.foundation.layout.Spacer(Modifier.padding(horizontal = 6.dp))
+        Spacer(Modifier.padding(horizontal = 6.dp))
         Text(label, style = MaterialTheme.typography.titleLarge)
     }
 }

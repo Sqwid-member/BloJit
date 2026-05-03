@@ -1,4 +1,4 @@
-package com.sqwid.blockconstructor.scripting
+package com.sqwid.blojit.scripting
 
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Size

@@ -1,6 +1,6 @@
-package com.sqwid.blockconstructor.blocks
+package com.sqwid.blojit.blocks
 
-import com.sqwid.blockconstructor.data.BlockInstance
+import com.sqwid.blojit.data.BlockInstance
 
 /**
  * Lowers a script's block tree to a single Lua source string, ready to be fed to LuaEngine.

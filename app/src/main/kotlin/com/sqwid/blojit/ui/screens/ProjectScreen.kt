@@ -1,4 +1,4 @@
-package com.sqwid.blockconstructor.ui.screens
+package com.sqwid.blojit.ui.screens
 
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
@@ -53,13 +53,13 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import com.sqwid.blockconstructor.data.AssetKind
-import com.sqwid.blockconstructor.data.AssetNode
-import com.sqwid.blockconstructor.data.FolderNode
-import com.sqwid.blockconstructor.data.ProjectStore
-import com.sqwid.blockconstructor.data.ScriptNode
-import com.sqwid.blockconstructor.data.TreeNode
-import com.sqwid.blockconstructor.ui.Routes
+import com.sqwid.blojit.data.AssetKind
+import com.sqwid.blojit.data.AssetNode
+import com.sqwid.blojit.data.FolderNode
+import com.sqwid.blojit.data.ProjectStore
+import com.sqwid.blojit.data.ScriptNode
+import com.sqwid.blojit.data.TreeNode
+import com.sqwid.blojit.ui.Routes
 import java.io.File
 import java.io.FileOutputStream
 

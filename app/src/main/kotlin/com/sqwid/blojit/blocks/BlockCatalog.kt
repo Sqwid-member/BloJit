@@ -1,6 +1,6 @@
-package com.sqwid.blockconstructor.blocks
+package com.sqwid.blojit.blocks
 
-import com.sqwid.blockconstructor.data.BlockInstance
+import com.sqwid.blojit.data.BlockInstance
 
 /**
  * The full library of available blocks. Adding a new block = adding one entry here.
